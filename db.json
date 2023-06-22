@@ -1,0 +1,8 @@
+{
+    "usuarios" : [
+        {"id" : 1, "nombre_usuario": "admin", "email": "gerardoman@rolling.com", "password": "asdqwe123"}
+    ],
+    "recetas" : [
+        {"id" : 1, "titulo": "budin", "descripcion": "bla, bla, bla", "ingredientes": "asdqwe123", "Tiempo_preparacion" : "30m", "imagen": "safjksañfkj"}
+    ]
+}
