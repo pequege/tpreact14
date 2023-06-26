@@ -1,8 +1,8 @@
 import React from "react";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown, Button } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom"
 
-const Menu = () => {
+const Menu = ({usuariologgeado, setUsuariologgeado}) => {
   return (
     <>
       <Navbar bg="light" expand="lg">
@@ -12,8 +12,14 @@ const Menu = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <NavLink className='nav-item nav-link' to='/' end>Inicio</NavLink>
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
+              {
+                (usuariologgeado.nombreUsuario)?
+                <>
+                <NavLink className='nav-item nav-link' to='/administrador' end>Administrador</NavLink>
+                <Button variant="dark">Log Out</Button>
+                </>:
+                <NavLink className='nav-item nav-link' to='/login' end>Login</NavLink>
+              }
             </Nav>
           </Navbar.Collapse>
         </Container>
