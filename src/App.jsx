@@ -8,11 +8,12 @@ import CrearReceta from './components/views/CrearReceta';
 import Administrador from './components/views/Administrador';
 import Login from './components/views/Login';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter, Routes, Route, json} from 'react-router-dom'
 import { useState } from 'react';
 
 function App() {
-  const [usuariologgeado, setUsuariologgeado] = useState({});
+  const usuarioSessionStorage = JSON.parse(sessionStorage.getItem('usuario')) || {}
+  const [usuariologgeado, setUsuariologgeado] = useState(usuarioSessionStorage);
   return (
     <BrowserRouter>
       <Menu usuariologgeado = {usuariologgeado} setUsuariologgeado={setUsuariologgeado}></Menu>

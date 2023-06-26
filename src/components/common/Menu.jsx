@@ -1,8 +1,16 @@
 import React from "react";
 import { Navbar, Container, Nav, NavDropdown, Button } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 
 const Menu = ({usuariologgeado, setUsuariologgeado}) => {
+  const navegacion = useNavigate();
+
+  const cerrarSesion = () =>{
+    sessionStorage.removeItem('usuario');
+    setUsuariologgeado({})
+    navegacion('/');
+  }
+
   return (
     <>
       <Navbar bg="light" expand="lg">
@@ -16,7 +24,7 @@ const Menu = ({usuariologgeado, setUsuariologgeado}) => {
                 (usuariologgeado.nombreUsuario)?
                 <>
                 <NavLink className='nav-item nav-link' to='/administrador' end>Administrador</NavLink>
-                <Button variant="dark">Log Out</Button>
+                <Button variant="dark" onClick={cerrarSesion}>Log Out</Button>
                 </>:
                 <NavLink className='nav-item nav-link' to='/login' end>Login</NavLink>
               }
