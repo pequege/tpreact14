@@ -5,7 +5,7 @@ const Error404 = () => {
     return (
         <>
             <Container>
-                <img src="../src/assets/error404.jpg" alt="error 404" className='img-fluid'/>
+                <img src="/src/assets/error404.jpg" alt="error 404" className='img-fluid'/>
             </Container>
         </>
     );
