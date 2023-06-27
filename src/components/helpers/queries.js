@@ -57,7 +57,7 @@ export const crearReceta = async(receta) =>{
     }
 }
 
-export const editarRecetas = async(receta, id) =>{
+export const editarReceta = async(receta, id) =>{
     try {
         const respuesta = await fetch(URL_receta + "/" + id ,{
             method: "PUT",

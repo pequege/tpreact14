@@ -18,7 +18,7 @@ const Menu = ({usuariologgeado, setUsuariologgeado}) => {
           <Navbar.Brand as={Link} to='/'>Recetapp</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="ms-auto me-0">
               <NavLink className='nav-item nav-link' to='/' end>Inicio</NavLink>
               {
                 (usuariologgeado.nombreUsuario)?
