@@ -23,6 +23,22 @@
       "tiempo_preparacion": "30",
       "imagen": "safjksañfkj",
       "id": 2
+    },
+    {
+      "titulo": "Hamburguejas2",
+      "email": "Maxime repudiandae e",
+      "ingredientes": "Aute saepe possimus",
+      "tiempoPreparacion": "44",
+      "imagen": "https://cdn.pixabay.com/photo/2013/02/22/19/43/sunset-85070_960_720.jpg",
+      "id": 3
+    },
+    {
+      "titulo": "Hamburguejas3",
+      "email": "Maxime repudiandae e",
+      "ingredientes": "Aute saepe possimus",
+      "tiempoPreparacion": "44",
+      "imagen": "https://cdn.pixabay.com/photo/2013/02/22/19/43/sunset-85070_960_720.jpg",
+      "id": 4
     }
   ]
 }

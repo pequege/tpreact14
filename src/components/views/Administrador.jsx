@@ -24,7 +24,7 @@ const Administrador = () => {
                 <div className="d-flex justify-content-between align-items-center m-2">
                     <h1 className="display-4 text-light">Recetas disponibles</h1>
                     <Link className="btn btn-primary" to='/administrador/crear-receta'>
-                    <i className='bi bi-clipboard-plus-fill'></i> Crear
+                        <i className='bi bi-clipboard-plus-fill'></i> Crear
                     </Link>
                 </div>
                 <Table responsive striped bordered hover>

@@ -42,7 +42,7 @@ export const obtenerReceta = async(id) =>{
     }
 }
 
-export const crearRecetas = async(receta) =>{
+export const crearReceta = async(receta) =>{
     try {
         const respuesta = await fetch(URL_receta ,{
             method: "POST",
