@@ -1,9 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { obtenerRecetas } from '../helpers/queries';
+import Swal from 'sweetalert2';
+import ItemReceta from './Receta/ItemReceta';
 
 const Administrador = () => {
-    useEffect
+    const [recetas, setRecetas] = useState([]);
+    useEffect(()=>{
+        //consulta a la api
+        obtenerRecetas().then((respuesta)=>{
+            if(respuesta){
+                setRecetas(respuesta);
+            }else{
+                Swal.fire('Error', 'Intente realizar ésta operación en unos minutos', 'error');
+            }
+        })
+    },[]);
+
     return (
         <>  
             <Container className='mainSection p-2'>
@@ -16,30 +30,18 @@ const Administrador = () => {
                 <Table responsive striped bordered hover>
                     <thead>
                         <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
+                        <th>Título</th>
+                        <th>Descripción</th>
+                        <th>ingredientes</th>
+                        <th>Tiempo Preparación</th>
+                        <th>Url de imagen</th>
+                        <th>Opciones</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        </tr>
-                        <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        </tr>
-                        <tr>
-                        <td>3</td>
-                        <td colSpan={2}>Larry the Bird</td>
-                        <td>@twitter</td>
-                        </tr>
+                        {
+                            recetas.map((receta )=><ItemReceta key={receta.id} receta={receta}></ItemReceta>)
+                        }
                     </tbody>
                 </Table>
             </Container>

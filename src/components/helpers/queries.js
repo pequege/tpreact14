@@ -1,4 +1,5 @@
 const URL_usuario = import.meta.env.VITE_API_USUARIO;
+const URL_receta = import.meta.env.VITE_API_RECETA;
 
 export const iniciarSesion = async(usuario) =>{
     try {
@@ -16,6 +17,16 @@ export const iniciarSesion = async(usuario) =>{
             console.log('el email no existe');
             return null;
         }
+    } catch (error) {
+        
+    }
+}
+
+export const obtenerRecetas = async() =>{
+    try {
+        const respuesta = await fetch(URL_receta);
+        const listaRecetas = await respuesta.json();
+        return listaRecetas;
     } catch (error) {
         
     }
