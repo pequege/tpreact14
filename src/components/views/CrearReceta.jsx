@@ -5,103 +5,96 @@ import { useForm } from 'react-hook-form';
 const CrearReceta = () => {
     const{ register, handleSubmit, formState: { errors }, reset} = useForm();
     const onSubmit = () =>{
-
+        
     }
     return (
         <>
             <section className='mainSection'>
-                <h2 className='text-light m-2'>Crear Receta</h2>
+                <h2 className='text-light m-2'>Nueva Receta</h2>
                 <Card className="m-2">
                     <Card.Body>
                         <Form onSubmit={handleSubmit(onSubmit)}>
-                            <FormGroup className='mb-2' controlId="email-input">
+                            <FormGroup className='mb-2' controlId="titulo-input">
                                 <Form.Label>Título</Form.Label>
                                 <Form.Control
                                 type="text"
                                 placeholder="Ej: hamburguejas al vapor..."
                                 {...register("titulo", {
-                                    required: "El Título es un campo obligatorio ",
-                                    pattern: {
-                                    value:
-                                        /a/,
-                                    message:
-                                        "El mail debe tener el siguiente formato: mail@dominio.com",
-                                    },
+                                    required: "El Título es un campo obligatorio "
                                 })}
                                 />
                                 <Form.Text muted>{errors.titulo?.message}</Form.Text>
                             </FormGroup>
-                            <FormGroup className='mt-2' controlId="email-input">
+                            <FormGroup className='mt-2' controlId="descripcion-input">
                                 <Form.Label>Descripción</Form.Label>
                                 <Form.Control
                                 as="textarea"
                                 placeholder="Son muy similares a las hamburguesas krusty..."
                                 {...register("email", {
-                                    required: "El Título es un campo obligatorio ",
-                                    pattern: {
-                                    value:
-                                        /a/,
+                                    max: {
+                                    value: 999,
                                     message:
-                                        "El mail debe tener el siguiente formato: mail@dominio.com",
-                                    },
+                                        "El máximo de carácteres permitidos para la descripción es 999",
+                                    }
                                 })}
                                 />
-                                <Form.Text muted>{errors.email?.message}</Form.Text>
+                                <Form.Text muted>{errors.descripcion?.message}</Form.Text>
                             </FormGroup>
-                            <FormGroup className='mt-2' controlId="email-input">
+                            <FormGroup className='mt-2' controlId="ingredientes-input">
                                 <Form.Label>Ingredientes <span className='text-secondary'>(separados por comas)</span></Form.Label>
                                 <Form.Control
                                 as="textarea"
                                 placeholder="Pan, hamburgueja, vapor..."
-                                {...register("email", {
-                                    required: "El Título es un campo obligatorio ",
+                                {...register("ingredientes", {
+                                    required: "Los ingredientes son un campo obligatorio ",
                                     pattern: {
                                     value:
-                                        /a/,
+                                        /^([\w\s-]+,)*[\w\s-]+$/,
                                     message:
-                                        "El mail debe tener el siguiente formato: mail@dominio.com",
-                                    },
+                                        "Los ingredientes deben estar separados por comas ,"
+                                    }
                                 })}
                                 />
-                                <Form.Text muted>{errors.email?.message}</Form.Text>
+                                <Form.Text muted>{errors.ingredientes?.message}</Form.Text>
                             </FormGroup>
-                            <FormGroup className='mt-2' controlId="email-input">
-                                <Form.Label>Tiempo de preparación</Form.Label>
+                            <FormGroup className='mt-2' controlId="tiempo-preparacion-input">
+                                <Form.Label>Tiempo de preparación <span className='text-secondary'>(en minutos)</span></Form.Label>
                                 <Form.Control
                                 type='number'
                                 placeholder="90 minutos"
-                                {...register("email", {
-                                    required: "El Título es un campo obligatorio ",
-                                    pattern: {
-                                    value:
-                                        /a/,
-                                    message:
-                                        "El mail debe tener el siguiente formato: mail@dominio.com",
+                                {...register("tiempoPreparacion", {
+                                    min: {
+                                        value: 5,
+                                        message: "El mínimo de tiempo es 5 minutos"
                                     },
+                                    max: {
+                                        value: 999,
+                                        message: "El máximo de tiempo es 999 minutos"
+                                    },
+                                    required: "El Tiempo de Preparación es un campo obligatorio ",
                                 })}
                                 />
-                                <Form.Text muted>{errors.email?.message}</Form.Text>
+                                <Form.Text muted>{errors.tiempoPreparacion?.message}</Form.Text>
                             </FormGroup>
-                            <FormGroup className='mt-2' controlId="email-input">
+                            <FormGroup className='mt-2' controlId="imagen-input">
                                 <Form.Label>Imagen</Form.Label>
                                 <Form.Control
                                 type='text'
                                 placeholder="https:/imagehosting.com/hamburgueja_al_vapor.jpg"
-                                {...register("email", {
-                                    required: "El Título es un campo obligatorio ",
+                                {...register("imagen", {
+                                    required: "El campo de imagen es obligatorio ",
                                     pattern: {
-                                    value:
-                                        /a/,
+                                    value:  /(https?:\/\/.*\.(?:png|jpg))/i,
                                     message:
-                                        "El mail debe tener el siguiente formato: mail@dominio.com",
+                                        "El formato de la URL de la imagen no es admitido.",
                                     },
                                 })}
                                 />
-                                <Form.Text muted>{errors.email?.message}</Form.Text>
+                                <Form.Text muted>{errors.imagen?.message}</Form.Text>
                             </FormGroup>
                         
                         <Button className="mt-2" type="submit">
-                            Log in
+                            Crear Receta
                         </Button>
                         </Form>
                     </Card.Body>
