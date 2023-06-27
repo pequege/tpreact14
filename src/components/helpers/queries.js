@@ -28,6 +28,57 @@ export const obtenerRecetas = async() =>{
         const listaRecetas = await respuesta.json();
         return listaRecetas;
     } catch (error) {
-        
+        console.log(error);
+    }
+}
+
+export const obtenerReceta = async(id) =>{
+    try {
+        const respuesta = await fetch(URL_receta + "/" + id);
+        const receta = await respuesta.json();
+        return receta;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const crearRecetas = async(receta) =>{
+    try {
+        const respuesta = await fetch(URL_receta ,{
+            method: "POST",
+            headers: {
+                "Content-type" : "application/json"
+            },
+            body: JSON.stringify(receta)
+        });
+        return respuesta;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const editarRecetas = async(receta, id) =>{
+    try {
+        const respuesta = await fetch(URL_receta + "/" + id ,{
+            method: "PUT",
+            headers: {
+                "Content-type" : "application/json"
+            },
+            body: JSON.stringify(receta)
+        });
+        return respuesta;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const borrarRecetas = async(id) =>{
+    try {
+        const respuesta = await fetch(URL_receta + "/" + id ,{
+            method: "DELETE",
+        });
+        return respuesta;
+    } catch (error) {
+        console.log(error);
     }
 }

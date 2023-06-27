@@ -1,13 +1,28 @@
 {
-    "usuarios" : [
-        {"id" : 1, "nombreUsuario": "admin", "email": "gerardoman@rolling.com", "password": "123456aA"}
-    ],
-    "recetas" : [
-        {"id" : 1,
-        "titulo": "budin",
-        "descripcion": "bla, bla, bla",
-        "ingredientes": "asdqwe123",
-        "tiempo_preparacion" : "30m",
-        "imagen": "safjksañfkj"}
-    ]
+  "usuarios": [
+    {
+      "id": 1,
+      "nombreUsuario": "admin",
+      "email": "gerardoman@rolling.com",
+      "password": "123456aA"
+    }
+  ],
+  "recetas": [
+    {
+      "id": 1,
+      "titulo": "budin",
+      "descripcion": "bla, bla, bla",
+      "ingredientes": "asdqwe123",
+      "tiempo_preparacion": "30m",
+      "imagen": "safjksañfkj"
+    },
+    {
+      "titulo": "hamburguejas al vapor",
+      "descripcion": "bla, bla, bla",
+      "ingredientes": "asdqwe123",
+      "tiempo_preparacion": "30",
+      "imagen": "safjksañfkj",
+      "id": 2
+    }
+  ]
 }
