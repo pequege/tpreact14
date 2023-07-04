@@ -22,7 +22,7 @@ const Inicio = () => {
         <>
             <section className='mainSection'>
                 <Container fluid className='px-0'>
-                    <img src="../src/assets/fondo01.jpg" alt="" className='img-fluid'/>
+                    <img src="/fondo01.jpg" alt="" className='img-fluid'/>
                     <h1 className='text-light'>Recetas CTM</h1>
                     <section className='d-flex row m-2 px-2'>
                         {mostrarLoader?
