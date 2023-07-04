@@ -43,7 +43,7 @@ const Administrador = () => {
                     </thead>
                     <tbody>
                         {mostrarLoader?
-                            <img src="./src/assets/loader-2_food2.gif"/>:
+                            <img src="/loader-2_food2.gif" alt='loader'/>:
                             recetas.map((receta )=><ItemReceta key={receta.id} receta={receta} recetas={recetas} setRecetas={setRecetas}></ItemReceta>)
                         }
                     </tbody>

@@ -26,7 +26,7 @@ const Inicio = () => {
                     <h1 className='text-light'>Recetas CTM</h1>
                     <section className='d-flex row m-2 px-2'>
                         {mostrarLoader?
-                        <img src="./src/assets/loader-2_food2.gif" className='' alt='loader'/>:
+                        <img src="/loader-2_food2.gif" className='' alt='loader'/>:
                             recetas.map((receta) => (
                                 <CardReceta key={receta.id} receta={receta}></CardReceta>
                             ))

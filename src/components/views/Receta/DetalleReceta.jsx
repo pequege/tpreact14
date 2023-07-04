@@ -23,7 +23,7 @@ const DetalleReceta = () => {
         <>
             <Container className='mainSection text-light'>
                 {mostrarLoader?
-                    <img src="../src/assets/loader-2_food2.gif"/>:
+                    <img src="/loader-2_food2.gif" alt='loader'/>:
                     <>
                     <img src={receta.imagen} className="img-fluid" alt=""/>
                     <h1 className='text-light'>{receta.titulo} <span className='text-secondary'>({receta.tiempoPreparacion} minutos)</span></h1>
