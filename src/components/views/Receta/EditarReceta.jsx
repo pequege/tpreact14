@@ -54,7 +54,7 @@ const EditarReceta = () => {
                                 <Form.Control
                                 as="textarea"
                                 placeholder="Son muy similares a las hamburguesas krusty..."
-                                {...register("email", {
+                                {...register("pasos", {
                                     max: {
                                     value: 999,
                                     message:

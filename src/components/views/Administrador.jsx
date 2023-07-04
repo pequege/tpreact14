@@ -7,11 +7,14 @@ import ItemReceta from './Receta/ItemReceta';
 
 const Administrador = () => {
     const [recetas, setRecetas] = useState([]);
+    const [mostrarLoader, setMostrarLoader] = useState(true);
+
     useEffect(()=>{
         //consulta a la api
         obtenerRecetas().then((respuesta)=>{
             if(respuesta){
                 setRecetas(respuesta);
+                setMostrarLoader(false);
             }else{
                 Swal.fire('Error', 'Intente realizar ésta operación en unos minutos', 'error');
             }
@@ -39,7 +42,8 @@ const Administrador = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {
+                        {mostrarLoader?
+                            <img src="./src/assets/loader-2_food2.gif"/>:
                             recetas.map((receta )=><ItemReceta key={receta.id} receta={receta} recetas={recetas} setRecetas={setRecetas}></ItemReceta>)
                         }
                     </tbody>
