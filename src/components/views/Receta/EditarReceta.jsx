@@ -1,18 +1,19 @@
 import React, { useEffect } from 'react';
 import { Card, Form, FormGroup, Button, Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import { obtenerReceta, editarReceta } from '../helpers/queries';
+import { obtenerReceta, editarReceta } from '../../helpers/queries';
 
 const EditarReceta = () => {
     const{ register, handleSubmit, formState: { errors }, reset, setValue} = useForm();
     const {id} = useParams();
-    const onSubmit =(recetaEditada, id) =>{
+    const navegacion = useNavigate();
+    const onSubmit =(recetaEditada) =>{
         editarReceta(recetaEditada, id).then((respuesta)=>{
             if(respuesta.status === 200){
-                Swal.fire('Receta creada', `${recetaEditada.titulo} fue editado correctamente`, 'success');
-                reset();
+                Swal.fire('Receta creada', `La receta "${recetaEditada.titulo}" fue editada correctamente`, 'success');
+                navegacion('/administrador');
             }else{
                 Swal.fire('Ocurrió un error', `${recetaEditada.titulo} no pudo ser editado`, 'error');
             }
@@ -117,7 +118,7 @@ const EditarReceta = () => {
                             </FormGroup>
                         
                         <Button className="mt-2" type="submit">
-                            Guardar Receta
+                            Guardar Edición
                         </Button>
                         </Form>
                     </Card.Body>

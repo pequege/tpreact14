@@ -9,35 +9,35 @@
   ],
   "recetas": [
     {
-      "id": 1,
-      "titulo": "budin",
-      "descripcion": "bla, bla, bla",
-      "ingredientes": "asdqwe123",
-      "tiempo_preparacion": "30m",
-      "imagen": "safjksañfkj"
+      "titulo": "Spaghetti con albóndigas",
+      "email": "Cocina los spaghetti según las instrucciones del paquete.\nEn un tazón, mezcla la carne molida, el pan rallado, el huevo y el ajo picado.\nForma albóndigas del tamaño deseado y cocínalas en una sartén con un poco de aceite.\nCalienta la salsa de tomate en una olla.\nColoca los spaghetti en platos, añade la salsa de tomate y las albóndigas.\nEspolvorea queso parmesano rallado por encima.",
+      "ingredientes": "Spaghetti, carne molida, pan rallado, huevo, ajo, salsa de tomate, queso parmesano rallado",
+      "tiempoPreparacion": "45",
+      "imagen": "https://cdn.pixabay.com/photo/2018/07/18/19/12/pasta-3547078_960_720.jpg",
+      "id": 1
     },
     {
-      "titulo": "hamburguejas al vapor",
-      "descripcion": "bla, bla, bla",
-      "ingredientes": "asdqwe123",
-      "tiempo_preparacion": "30",
-      "imagen": "safjksañfkj",
+      "titulo": "Smoothie de frutas",
+      "email": "",
+      "ingredientes": "Platano, fresas, mango, yogur natural, jugo de naranja",
+      "tiempoPreparacion": "15",
+      "imagen": "https://cdn.pixabay.com/photo/2010/12/13/10/14/berries-2558_960_720.jpg",
       "id": 2
     },
     {
-      "titulo": "Hamburguejas2",
-      "email": "Maxime repudiandae e",
-      "ingredientes": "Aute saepe possimus",
-      "tiempoPreparacion": "44",
-      "imagen": "https://cdn.pixabay.com/photo/2013/02/22/19/43/sunset-85070_960_720.jpg",
+      "titulo": " Tacos de pollo",
+      "email": "Corta la pechuga de pollo en trozos pequeños y condiméntalos con las especias de tu elección.\nCocina el pollo en una sartén con un poco de aceite hasta que esté dorado y bien cocido.\nCalienta las tortillas de maíz en una sartén o en el horno.\nRellena las tortillas con el pollo cocido, cebolla picada, cilantro y salsa de tomate.\nExprime un poco de jugo de limón por encima.",
+      "ingredientes": "Pechuga de pollo, tortillas de maiz, cebolla, cilantro, jugo de limon, salsa de tomate, especias",
+      "tiempoPreparacion": "86",
+      "imagen": "https://cdn.pixabay.com/photo/2017/12/27/04/28/tortilla-3041938_960_720.jpg",
       "id": 3
     },
     {
-      "titulo": "Hamburguejas3",
-      "email": "Maxime repudiandae e",
-      "ingredientes": "Aute saepe possimus",
-      "tiempoPreparacion": "44",
-      "imagen": "https://cdn.pixabay.com/photo/2013/02/22/19/43/sunset-85070_960_720.jpg",
+      "titulo": "Ensalada César",
+      "email": "Lava y corta la lechuga romana en trozos.\nCocina la pechuga de pollo a la parrilla y córtala en tiras.\nEn un tazón grande, mezcla la lechuga, los croutones y el queso parmesano.\nAgrega las tiras de pollo a la ensalada.\n    Vierte el aderezo César sobre la ensalada y mezcla bien.",
+      "ingredientes": "Lechuga romana, croutones, queso parmesano rallado, pechuga de pollo a la parrilla, aderezo Caesar",
+      "tiempoPreparacion": "20",
+      "imagen": "https://cdn.pixabay.com/photo/2017/08/11/00/32/salad-2629262_960_720.jpg",
       "id": 4
     }
   ]

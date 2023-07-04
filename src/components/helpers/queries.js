@@ -72,7 +72,7 @@ export const editarReceta = async(receta, id) =>{
     }
 }
 
-export const borrarRecetas = async(id) =>{
+export const borrarReceta = async(id) =>{
     try {
         const respuesta = await fetch(URL_receta + "/" + id ,{
             method: "DELETE",

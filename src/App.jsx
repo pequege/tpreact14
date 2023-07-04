@@ -10,6 +10,7 @@ import RutasProtegidas from './components/routes/RutasProtegidas';
 import RutasAdministrador from './components/routes/RutasAdministrador';
 import {BrowserRouter, Routes, Route, json} from 'react-router-dom'
 import { useState } from 'react';
+import DetalleReceta from './components/views/Receta/DetalleReceta';
 
 function App() {
   const usuarioSessionStorage = JSON.parse(sessionStorage.getItem('usuario')) || {}
@@ -28,6 +29,7 @@ function App() {
             </RutasProtegidas>
           }>
         </Route>
+        <Route exact path='detalle/:id' element={<DetalleReceta></DetalleReceta>}></Route>
         <Route exact path='/login' element={<Login setUsuariologgeado={setUsuariologgeado}></Login>}></Route>
       </Routes>
       <Footer></Footer>
